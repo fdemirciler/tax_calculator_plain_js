@@ -88,8 +88,8 @@ incomeInput.addEventListener('input', (e) => {
 const populateTaxBrackets = () => {
   taxBracketsBody.innerHTML = TAX_BRACKETS.map(bracket => `
     <tr>
-      <td>${formatCurrency(bracket.low)}</td>
-      <td>${bracket.high === Infinity ? 'Above' : formatCurrency(bracket.high)}</td>
+      <td>${formatNumber(bracket.low)}</td>
+      <td>${bracket.high === Infinity ? 'Above' : formatNumber(bracket.high) }</td>
       <td>${(bracket.rate * 100)}%</td>
     </tr>
   `).join('');
